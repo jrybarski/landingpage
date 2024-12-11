@@ -94,6 +94,7 @@ body {
   border-radius: 30px;
   border: none;
   background-color: #4c97a7;
+  min-width: 160px;
 }
 
 .btn2 {
@@ -104,6 +105,7 @@ body {
   border-radius: 30px;
   border: none;
   background-color: #885eb5;
+  min-width: 120px;
 }
 
 .version {
@@ -161,9 +163,10 @@ body {
 
 .background {
   width: 100%;
-  height: 400px;
+  height: 100%;
+  min-height: 500px;
   position: relative; /* Aby pseudoelement działał poprawnie */
-  background-image: url("/starter-code/assets/mobile/image-footer.jpg");
+  background-image: url("/assets/mobile/image-footer.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -207,10 +210,62 @@ body {
   position: relative;
   z-index: 2;
   background-color: #855fb2;
-  margin-left: 5em;
-  margin-right: 5em;
+
   text-align: center;
   padding: 1em 0em;
   border-radius: 20px;
-  max-width: 400px;
+  max-width: 350px;
+  min-width: 150px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 64em) {
+  .midcontent h1 {
+    padding: 0em 3em;
+  }
+  .midcontent h2 {
+    padding: 0em 7em;
+  }
+  .button-container {
+    display: flex; /* Ustawia Flexbox */
+    justify-content: center; /* Środek strony */
+    align-items: center; /* Wyrównanie w pionie, opcjonalne */
+    gap: 2em; /* Odstęp między przyciskami */
+  }
+
+  .btn1,
+  .btn2 {
+    width: calc(40% - 1rem);
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .btn1 {
+    margin-right: 0rem; /* Dodaje margines od środka w prawo */
+    max-width: 250px;
+  }
+  .btn2 {
+    margin-left: 0rem; /* Dodaje margines od środka w lewo */
+    max-width: 150px;
+  }
+
+  .featured {
+    padding-top: 8em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .midcontent h4 {
+    padding: 0em 5em;
+  }
+
+  .footer p {
+    font-size: 2.8rem;
+    padding: 0em 6em;
+  }
+  .footer h5 {
+    font-size: 1.2rem;
+    padding: 0em 6em;
+  }
+  .background {
+    background-image: url("/assets/tablet/image-footer.jpg");
+  }
 }
